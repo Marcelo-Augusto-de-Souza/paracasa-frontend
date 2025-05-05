@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: paracasa-frontend
+    name: paracasa
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_BACKEND_URL
-        value: https://<your-backend-service-url> # Set this to your backend's Render URL after deploying backend
+        value: https://paracasa-backend.onrender.com/
