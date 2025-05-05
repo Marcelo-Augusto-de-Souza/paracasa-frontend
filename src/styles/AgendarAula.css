@@ -1,0 +1,177 @@
+/* AgendarAula.css */
+.agendar-aula-container {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  .student-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .student-name-circle {
+    background-color: #6f42c1;
+    color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-button {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .header-button.active {
+    background-color: #4a148c;
+  }
+  
+  .question-modal {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    color: #6f42c1;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6f42c1;
+    cursor: pointer;
+  }
+  
+  .subject-select {
+    margin-bottom: 20px;
+  }
+  
+  .subject-select label {
+    display: block;
+    margin-bottom: 10px;
+    color: #6f42c1;
+  }
+  
+  .subject-select select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6f42c1;
+    border-radius: 5px;
+  }
+  
+  .file-upload {
+    margin-bottom: 20px;
+  }
+  
+  .file-upload-button {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #6f42c1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-name {
+    margin-left: 10px;
+    color: #4a148c;
+  }
+  
+  .question-input textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 2px solid #6f42c1;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .share-option {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .share-option input {
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .student-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-buttons {
+      margin-top: 15px;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .header-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .question-modal {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  }

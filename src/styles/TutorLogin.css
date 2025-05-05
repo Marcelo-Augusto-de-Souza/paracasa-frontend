@@ -1,0 +1,88 @@
+/* Estilo para o container principal */
+.tutor-login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/* Estilo para o título */
+.tutor-login-container h2 {
+    text-align: center;
+    color: #8A2BE2;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Estilo para o formulário */
+.tutor-login-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Adicionado para centralizar */
+}
+
+/* Estilo para os campos de entrada */
+.tutor-login-container input {
+    padding: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.tutor-login-container input:focus {
+    border-color: #8A2BE2;
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+    outline: none;
+}
+
+/* Estilo para o botão de entrar */
+.tutor-login-container button {
+    padding: 15px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tutor-login-container button:hover {
+    background-color: #7B1FA2;
+    transform: scale(1.05);
+}
+
+/* Estilo para mensagens de erro */
+.tutor-login-container .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para o link de cadastro */
+.tutor-login-container .cadastro-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.tutor-login-container .cadastro-link a {
+    color: #8A2BE2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tutor-login-container .cadastro-link a:hover {
+    text-decoration: underline;
+}

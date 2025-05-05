@@ -1,0 +1,67 @@
+/* SolicitacaoAula.css */
+
+.solicitacao-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.solicitacao-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.solicitacao-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.solicitacao-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.solicitacao-container input:focus {
+    border-color: #007bff;
+}
+
+.solicitacao-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.solicitacao-container button:hover {
+    background-color: #0056b3;
+}
+
+.solicitacao-container button:active {
+    background-color: #004080;
+}
+
+.solicitacao-container p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+}

@@ -1,0 +1,355 @@
+/* TelaTutor.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --text-color: #333; /* Cor padrão para texto */
+  --background-color: #f4f4f4; /* Cor de fundo padrão */
+  --card-background: white; /* Cor de fundo dos cards */
+  --card-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra dos cards */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f4f4f4; /* Cor de texto para modo escuro */
+    --background-color: #333; /* Cor de fundo para modo escuro */
+    --card-background: #444; /* Cor de fundo dos cards para modo escuro */
+    --card-shadow: 0 4px 6px rgba(255,255,255,0.1); /* Sombra dos cards para modo escuro */
+  }
+}
+
+.tela-tutor-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color); /* Aplicando a cor de texto padrão */
+}
+
+.container1 {
+  padding: 40px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.tutor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tutor-name-circle {
+  background-color: #6f42c1;
+  color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.availability-toggle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #6f42c1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.header-button {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.online-teachers-info {
+  font-weight: bold;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.subject-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #333; /* Cor fixa cinza escuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.subject-card.selected {
+  background-color: #e6e6e6;
+}
+
+.checkbox-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6f42c1;
+  border-radius: 4px;
+}
+
+.checkmark {
+  color: #6f42c1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subject-name {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1rem; 
+  color: #333;
+  text-align: center;
+}
+.subject-icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem; /* Tamanho menor para a área */
+  color:#6f42c1; /* Cor mais clara para a área (opcional) */
+  text-align: center; /* Centraliza o texto da área */
+}
+
+.subject-icons span {
+  font-size: 0.9rem; /* Tamanho menor para o ícone da área */
+  color: #6f42c1; /* Cor mais clara para o ícone da área (opcional) */
+}
+
+
+@media (max-width: 1024px) {
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tutor-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tutor-name-circle {
+    margin-bottom: 20px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Estilo para o menu lateral */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #8A2BE2;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-lateral.open {
+  left: 0;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.menu-lateral ul li {
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-lateral ul li:hover {
+  background-color: #7B1FA2;
+}
+
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  color: #8A2BE2;
+}
+
+/* Estilo para o ícone e nome da matéria */
+.subject-icon-name {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  gap: 10px; /* Espaço entre o ícone e o nome */
+  margin-bottom: 10px;
+  justify-content: center; /* Centraliza o ícone e o nome horizontalmente */
+}
+
+.subject-icon {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  line-height: 1; /* Garante que o ícone não tenha espaçamento extra */
+}
+
+.subject-name {
+  font-size: 1.1rem; /* Tamanho do nome da matéria */
+  font-weight: bold;
+  color: #333; /* Cor fixa cinza escuro */
+  line-height: 1; /* Garante que o texto não tenha espaçamento extra */
+}
+
+/* Estilo para a área da matéria (canto inferior direito) */
+.subject-area {
+  font-size: 0.9rem; /* Tamanho menor para a área */
+  color: #666; /* Cor mais clara para a área */
+  position: absolute; /* Posicionamento absoluto */
+  bottom: 10px; /* Distância da borda inferior */
+  right: 10px; /* Distância da borda direita */
+}
+
+/* Estilo para o número de tutores (canto inferior esquerdo) */
+.tutor-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.9rem;
+  color: #333; /* Cor do texto */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaço entre o emoji e o número */
+}

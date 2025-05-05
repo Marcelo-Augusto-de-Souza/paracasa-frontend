@@ -1,0 +1,121 @@
+/* TelaAluno.css */
+.tela-aluno-container {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    
+    width: 100vw;
+    margin: 0 auto;
+  }
+  
+  .container1{
+    padding: 40px;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  .student-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .student-name-circle {
+    background-color: #6f42c1;
+    color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-button {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .online-teachers-info {
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .subject-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+  
+  .subject-name {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .subject-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .subjects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .student-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .student-name-circle {
+      margin-bottom: 20px;
+    }
+  
+    .header-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .header-button {
+      width: 100%;
+    }
+  
+    .subjects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

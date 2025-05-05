@@ -1,0 +1,87 @@
+/* Feedback.css */
+.feedback-container {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feedback-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feedback-content h2 {
+    color: #6f42c1;
+    margin-bottom: 20px;
+  }
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .star {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star.active {
+    color: #FFD700;
+  }
+  
+  .feedback-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6f42c1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    resize: vertical;
+  }
+  
+  .submit-feedback-button {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-feedback-button:disabled {
+    background-color: #a970ff;
+    cursor: not-allowed;
+  }
+  
+  /* Reuse styles from HistoricoQuestoes.css */
+  .logo-container,
+  .student-header,
+  .student-name-circle,
+  .header-buttons,
+  .header-button {
+    /* Copy relevant styles from HistoricoQuestoes.css */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feedback-content {
+      padding: 15px;
+    }
+  
+    .star {
+      font-size: 2rem;
+    }
+  }
